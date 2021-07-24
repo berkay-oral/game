@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 600px;
+    height: 500px;
+    border: 1px solid none;
+    margin: auto;
+    box-sizing: border-box;
+    background-image: url(./images/space.jpg) ;
+    background-size: cover;
+    
+}
+#character{
+    width: 100px;
+    height: 100px;
+    background-color: none;
+    position: relative;
+    top: 160px;
+    left: 0px;
+     /* transition: .1s ;*/ 
+} 
+
+
+.characterJump{
+    animation: mymove .2s  ;
+}
+
+
+@keyframes mymove {
+   0% { top: 160px;  transform: scaleY(0.7);   }
+   70% {top: 100px;  transform: scaleY(1.2);   }
+   100% { top: 160px; transform: scaleY(1); }
+ }
+
+
+
+
+#white{
+    top: 500px;
+    z-index: 100;
+    position: absolute;
+    width: 300px;
+    height: 130px;
+    background-color: none;
+}
+#block{
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    background-color: none;
+    position: relative;
+    animation: slide 1s infinite linear;
+    transform: rotate(-20deg);
+}
+@keyframes slide{
+    0%{top:-100px};
+    100%{top:500px};
+}
+#left, #right{
+    width:50%;
+    position: absolute;
+    height: 500px;
+}
+#right{
+    left: 50%;
+}
+
